@@ -187,7 +187,6 @@
 
 			var active_link_mobile = $('#menu-mobile a[href="#' + active_section.attr("id") + '"]');
 
-			console.log(active_link_mobile);
 			$('.menu-mobile li').removeClass('current');
 			active_link_mobile.find('li').addClass('current');
     	navigation_links.parent().removeClass("current");
