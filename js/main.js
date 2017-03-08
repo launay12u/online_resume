@@ -27,7 +27,7 @@
  			$(".main-navigation li a").css("color",'#FFF')
  			$(".main-navigation li.current > a").css('color','#21C3C9')
  				break;
- 			case "portfolio":
+ 			case "Project":
  			$(".main-navigation li a").css("color",'#000')
  			$(".main-navigation li.current > a").css('color','#21C3C9')
 
@@ -36,6 +36,26 @@
  			$(".main-navigation li a").css("color",'#000')
  			$(".main-navigation li.current > a").css('color','#21C3C9')
  				break;
+
+					//FR
+
+				case "Présentation":
+	 			$(".main-navigation li a").css("color",'#000')
+	 			$(".main-navigation li.current > a").css('color','#21C3C9')
+	 				break;
+	 			case "Accueil":
+	 			$(".main-navigation li a").css("color",'#FFF')
+	 			$(".main-navigation li.current > a").css('color','#21C3C9')
+	 				break;
+	 			case "Projet":
+	 			$(".main-navigation li a").css("color",'#000')
+	 			$(".main-navigation li.current > a").css('color','#21C3C9')
+
+	 				break;
+	 			case "Cursus":
+	 			$(".main-navigation li a").css("color",'#000')
+	 			$(".main-navigation li.current > a").css('color','#21C3C9')
+	 				break;
  		}
 
       // will first fade out the loading animation
@@ -213,6 +233,24 @@
 				$(".main-navigation li a").css("color",'#000')
 				$(".main-navigation li.current > a").css('color','#21C3C9')
 					break;
+
+					case "Présentation":
+		 			$(".main-navigation li a").css("color",'#000')
+		 			$(".main-navigation li.current > a").css('color','#21C3C9')
+		 				break;
+		 			case "Accueil":
+		 			$(".main-navigation li a").css("color",'#FFF')
+		 			$(".main-navigation li.current > a").css('color','#21C3C9')
+		 				break;
+		 			case "Projet":
+		 			$(".main-navigation li a").css("color",'#000')
+		 			$(".main-navigation li.current > a").css('color','#21C3C9')
+
+		 				break;
+		 			case "Cursus":
+		 			$(".main-navigation li a").css("color",'#000')
+		 			$(".main-navigation li.current > a").css('color','#21C3C9')
+		 				break;
 			}
 
 		},
