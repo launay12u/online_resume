@@ -157,6 +157,7 @@ p.lead {
 	font-size: 2rem;
 	line-height: 1.8;
 	color: #888888;
+	text-align: justify;
 }
 @media only screen and (max-width:768px) {
 	p.lead {
@@ -1029,7 +1030,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #7d7d7d;
 }
 .section-intro {
-	max-width: 700px;
+	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: justify;
@@ -1136,6 +1137,27 @@ header .logo a {
 	margin-top: 13px;
 	display: block;
 	position: relative;
+}
+
+.menu-trad {
+	float: right;
+	margin-right: 20px;
+	margin-top: 13px;
+	display: block;
+	position: relative;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 1.8rem;
+	color: #21C3C9 !important;
+}
+
+.menu-trad-mobile {
+	float: left;
+	margin-left: 20px;
+	display: block;
+	position: relative;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 1.8rem;
+	color: #FFFFFF !important;
 }
 .menu-toggle span {
 	display: block;
@@ -1512,7 +1534,7 @@ header .logo a {
 	float: left;
 }
 .intro-info .lead {
-	text-align: left;
+	text-align: justify;
 	padding-left: 13rem;
 }
 
@@ -1557,9 +1579,6 @@ header .logo a {
 
 .button-section {
 	text-align: center;
-}
-.button-section .button {
-	width: 250px;
 }
 .button-section [class*="col-"] .button:first-child {
 	margin-right: 4rem;
@@ -2409,6 +2428,17 @@ header .logo a {
 	color: #21C3C9;
 }
 
+.project-info {
+	margin: 4.8rem auto 0;
+	font-family: "poppins-regular", sans-serif;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.project-info h1{
+	color: #21C3C9;
+	margin-bottom: 0;
+}
 /**
  * loader animation - (_layout.scss)
  * ---------------------------------------------------------------
