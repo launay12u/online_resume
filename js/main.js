@@ -322,28 +322,39 @@
 
 	var isActive = false;
 
-$('.js-menu').on('click', function() {
-	if (isActive) {
-		$(this).removeClass('active');
+	$('.js-menu').on('click', function() {
+		if (isActive) {
+			$(this).removeClass('active');
+			$('body').removeClass('menu-open');
+		} else {
+			$(this).addClass('active');
+			$('body').addClass('menu-open');
+		}
+
+		isActive = !isActive;
+	});
+
+
+
+	$( "#menu-toggle-mobile" ).click(function() {
+				$( ".menu-mobile" ).slideToggle( "slow")
+	});
+
+	$('.header-mobile a').click(function() {
+		$(".js-menu").removeClass('active');
 		$('body').removeClass('menu-open');
-	} else {
-		$(this).addClass('active');
-		$('body').addClass('menu-open');
-	}
-
-	isActive = !isActive;
-});
+		isActive = !isActive;
+	$( ".menu-mobile" ).fadeOut( "slow")
+	});
 
 
+	 	/*----------------------------------------------------- */
+  	/* Skill list
+   ------------------------------------------------------- */
 
-$( "#menu-toggle-mobile" ).click(function() {
-			$( ".menu-mobile" ).slideToggle( "slow")
-});
+	 $('.skill-bar').click(function(){
+			$(this).parent().toggleClass('active');
+			$(this).next('.skill-list').slideToggle('slow');
 
-$('.header-mobile a').click(function() {
-	$(".js-menu").removeClass('active');
-	$('body').removeClass('menu-open');
-	isActive = !isActive;
-$( ".menu-mobile" ).fadeOut( "slow")
-});
+	 })
 })(jQuery);
