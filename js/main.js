@@ -363,11 +363,23 @@
 				var parentOffset = $(this).parent().offset();
 				var x = event.pageX - parentOffset.left;
 				var y = event.pageY - parentOffset.top;
+				var windowWidth = $(window).width();
+				var windowHeight = $(window).height();
+				console.log(event.clientX+tooltip.innerWidth()+10, event.clientY+tooltip.innerHeight()+15, windowWidth, windowHeight);
+				if(event.clientX+tooltip.innerWidth()+10 > windowWidth){
+					x=x-tooltip.innerWidth()-10;
+				}
 
+				if(event.clientY+tooltip.innerHeight()+15 > windowHeight){
+					y=y-tooltip.innerHeight()-15;
+				}
 				tooltip.css({ top: y + 15, left: x+10 ,visibility:"visible"});
-		}).on('mouseout',function(){
+		}).on('mouseout scroll',function(){
 				$(this).next(".tooltiptext").css("visibility","hidden");
 		});
+		$(document).scroll(() => {
+			$(".tooltiptext").css("visibility","hidden");
+		})
 });
 
 })(jQuery);
