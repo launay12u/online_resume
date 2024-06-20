@@ -365,7 +365,6 @@
 				var y = event.pageY - parentOffset.top;
 				var windowWidth = $(window).width();
 				var windowHeight = $(window).height();
-				console.log(event.clientX+tooltip.innerWidth()+10, event.clientY+tooltip.innerHeight()+15, windowWidth, windowHeight);
 				if(event.clientX+tooltip.innerWidth()+10 > windowWidth){
 					x=x-tooltip.innerWidth()-10;
 				}
