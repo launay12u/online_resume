@@ -965,53 +965,44 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .icon-list {
+	list-style-type: none;
+	padding: 0;
 	display: flex;
-	list-style: none; /* Supprime les puces de la liste */
-	padding: 0; /* Supprime le padding de la liste */
-	margin: 0; /* Supprime la marge de la liste */
-	width: 100%; /* Assure que les icônes prennent toute la largeur disponible */
 	flex-wrap: wrap;
-	margin-bottom: 2rem;
+	justify-content: start;
+}
+
+.icon-list > * {
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.tooltip {
+	position: relative;
+}
+
+.tooltip img {
+	width: 5rem;
+	height: auto;
+}
+.tooltip .tooltiptext {
+	visibility: hidden;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 1;
+
 }
 
 .icon-list li {
-	flex: 0 0 calc(100% / 5); /* Fixe la largeur de chaque élément à 1/6 de la largeur totale */
 	display: flex;
 	padding-left: 0;
 	justify-content: center; /* Centre chaque icône horizontalement */
 	align-items: center; /* Centre chaque icône verticalement */
 	margin-top: 2.5rem; /* Ajoute 2rem de marge inférieure */
-}
-
-.skill .skill-list li img {
-	width: 5rem;
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-	left: 50%;
-	top: 105%;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-	transition: visibility 0.2s ease;
-
 }
 
 .skill-bars .skill-bar{

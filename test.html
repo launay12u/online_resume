@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Position in List Items with Tooltip</title>
+    <style>
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .icon-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tooltip {
+            position: relative;
+            margin: 10px;
+        }
+        .tooltip img {
+            width: 5rem;
+            height: auto;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+      .icon-list li {
+        flex: 0 0 calc(100% / 5); /* Fixe la largeur de chaque élément à 1/6 de la largeur totale */
+        display: flex;
+        padding-left: 0;
+        justify-content: center; /* Centre chaque icône horizontalement */
+        align-items: center; /* Centre chaque icône verticalement */
+        margin-top: 2.5rem; /* Ajoute 2rem de marge inférieure */
+      }
+      
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="row about-content">
+
+    <div class="col-twelve tab-full">
+
+      <h3>Compétences :</h3>
+      <ul class="skill-bars">
+        <div class="skill active">
+        <li class="skill-bar">
+          <strong>Backend <i class="fa fa-arrow-right"></i></strong>
+          <div class="progress percent95"><span>95%</span></div>
+        </li>
+        <div class="skill-list">
+          <ul class="icon-list">
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" /><span class="tooltiptext">PHP</span></li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" /><span class="tooltiptext">Laravel</span></li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg" /><span class="tooltiptext">Symfony</span></li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" /> <span class="tooltiptext">NodeJS</span></li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" /> <span class="tooltiptext">TypeScript</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" /> <span class="tooltiptext">Express</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" /> <span class="tooltiptext">Python</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" /> <span class="tooltiptext">Flask</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" /> <span class="tooltiptext">FastAPI</li>
+            <li class="tooltip"><img src="https://media.licdn.com/dms/image/C5112AQEEcR2mak_D8Q/article-cover_image-shrink_720_1280/0/1563209644780?e=2147483647&v=beta&t=U76cYNVN1rJWoYx1fKFsMW9-3DbfyImlwWGFhLLc3qk" /> <span class="tooltiptext">Microservices</li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill">
+        <li class="skill-bar">
+          <div class="progress percent80"><span>80%</span></div>
+          <strong>Frontend <i class="fa fa-arrow-right"></i></strong>
+        </li>
+        <div class="skill-list" style="display: none;">
+          <ul class="icon-list">
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" /><span class="tooltiptext">HTML5</span></li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" /> <span class="tooltiptext">CSS3</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /> <span class="tooltiptext">Tailwind</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" /> <span class="tooltiptext">JavaScript</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" /> <span class="tooltiptext">TypeScript</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" /> <span class="tooltiptext">ReactJS</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" /> <span class="tooltiptext">VueJS</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" /> <span class="tooltiptext">Vite</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" /> <span class="tooltiptext">Flutter</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill">
+        <li class="skill-bar">
+          <div class="progress percent80"><span>80%</span></div>
+          <strong>Data <i class="fa fa-arrow-right"></i></strong>
+        </li>
+        <div class="skill-list" style="display: none;">
+          <ul class="icon-list">
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" /> <span class="tooltiptext">MySQL</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original.svg" /> <span class="tooltiptext">MariaDB</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" /> <span class="tooltiptext">PostgreSQL</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" /> <span class="tooltiptext">MongoDB</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" /> <span class="tooltiptext">Redis</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neo4j/neo4j-original.svg" /> <span class="tooltiptext">Neo4J</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg" /> <span class="tooltiptext">Elastic</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" /> <span class="tooltiptext">Pandas</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" />	<span class="tooltiptext">Numpy</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/plotly/plotly-original.svg" /> <span class="tooltiptext">Plotly</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" /> <span class="tooltiptext">Matplotlib</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" /> <span class="tooltiptext">SciKit-Learn</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" /> <span class="tooltiptext">Kafka</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg" /> <span class="tooltiptext">Airflow</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg" />	<span class="tooltiptext">Spark</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill">
+        <li class="skill-bar">
+          <div class="progress percent75"><span>75%</span></div>
+          <strong>DevOps <i class="fa fa-arrow-right"></i></strong>
+        </li>
+        <div class="skill-list" style="display: none;">
+          <ul class="icon-list">
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" /> <span class="tooltiptext">Git</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" /> <span class="tooltiptext">Github</li>
+            <li class="tooltip"><img src="https://assets-global.website-files.com/6203daf47137054c031fa0e6/63306942721a28becf0ded7a_github-actions.svg" /> <span class="tooltiptext">Github Actions</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" /> <span class="tooltiptext">Gitlab</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" /> <span class="tooltiptext">AWS</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" /> <span class="tooltiptext">Docker</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" /> <span class="tooltiptext">Kubernetes</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" /> <span class="tooltiptext">Terraform</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" /> <span class="tooltiptext">Grafana</li>
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg" /> <span class="tooltiptext">Prometheus</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill">
+        <li class="skill-bar">
+          <div class="progress percent75"><span>75%</span></div>
+          <strong>Project management <i class="fa fa-arrow-right"></i></strong>
+        </li>
+        <div class="skill-list" style="display: none;">
+          <ul class="icon-list">
+            <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" /> <span class="tooltiptext">Jira</li>
+              <li class="tooltip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg" /> <span class="tooltiptext">Trello</li>
+                <li class="tooltip"><img src="https://cdn-icons-png.flaticon.com/512/2784/2784065.png" /> <span class="tooltiptext">AGILE</li>
+                <li class="tooltip"><img src="https://cdn-icons-png.flaticon.com/512/2657/2657900.png" /> <span class="tooltiptext">Gantt</li>
+          </ul>
+        </div>
+      </div>
+
+      </ul> <!-- /skill-bars -->
+
+    </div>
+    <div class="col-twelve">
+
+      <h3>Profil</h3>
+      <p class="lead"> Après avoir fondé ma propre startup à la fin de mes études, j'ai acquis une solide expérience
+        dans le développement web,
+        en particulier avec des technologies telles que PHP ou NodeJS. Fort de cette expérience, j'ai ensuite élargi
+        mes compétences
+        en suivant une formation en analyse de données, me plongeant dans l'univers de Python, Spark, Airflow ect. Mon
+        parcours varié
+        m'a permis de maîtriser différentes facettes de la technologie, combinant ainsi DevOps, Backend, Frontend et
+        Data
+        le tout sous une gestion de projet AGILE et avec esprit entrepreneurial.</p>
+
+    </div>
+
+  </div>
+
+
+<script>
+    $(document).ready(function(){
+        $(".tooltip").on('scroll click mousemove',function(event){
+            var tooltipText = $(this).find(".tooltiptext").text();
+            var tooltip = $(this).find(".tooltiptext");
+            var parentOffset = $(this).offset();
+            var x = event.pageX - parentOffset.left;
+            var y = event.pageY - parentOffset.top;
+
+            tooltip.css({ top: y + 20, left: x });
+        });
+    });
+</script>
+
+</body>
+</html>

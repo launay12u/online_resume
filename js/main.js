@@ -352,9 +352,22 @@
   	/* Skill list
    ------------------------------------------------------- */
 
-	 $('.skill-bar').click(function(){
+	$('.skill-bar').click(function(){
 			$(this).parent().toggleClass('active');
 			$(this).next('.skill-list').slideToggle('slow');
+	});
 
-	 })
+	$(document).ready(function(){
+		$(".tooltip img").on('scroll click mousemove',function(event){
+				var tooltip = $(this).next(".tooltiptext");
+				var parentOffset = $(this).parent().offset();
+				var x = event.pageX - parentOffset.left;
+				var y = event.pageY - parentOffset.top;
+
+				tooltip.css({ top: y + 15, left: x+10 ,visibility:"visible"});
+		}).on('mouseout',function(){
+				$(this).next(".tooltiptext").css("visibility","hidden");
+		});
+});
+
 })(jQuery);
