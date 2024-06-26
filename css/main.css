@@ -742,10 +742,13 @@ button.stroke.medium, .button.stroke.medium {
 button.stroke.large, .button.stroke.large {
 	line-height: 5.4rem !important;
 }
-button.stroke:hover, .button.stroke:hover {
-	border: 3px solid #21C3C9;
-	color: #21C3C9;
+@media(hover: hover) {
+	button.stroke:hover, .button.stroke:hover {
+		border: 3px solid #21C3C9;
+		color: #21C3C9;
+	}
 }
+
 button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
@@ -1695,7 +1698,9 @@ header .logo a {
 .button-section [class*="col-"] .button:first-child {
 	margin-right: 4rem;
 }
-
+.button-section [class*="col-"] .button:only-child {
+	margin-right: 0;
+}
 /**
  * responsive:
  * about
